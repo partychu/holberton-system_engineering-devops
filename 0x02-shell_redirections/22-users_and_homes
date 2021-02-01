@@ -1,2 +1,2 @@
-#!/bin/bash
-cut -d: -f 1,6  /etc/pass/wd | sort
+#!/binibash
+cut -d ':' -f 1,6  /etc/pass/wd | sort
