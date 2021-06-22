@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Loops from 1-10 and displays bad luck on 4, good luck on 8, and Holberton School for the rest
+counter=1
+while [ $counter -le 10 ]
+do
+	if [ $counter -eq 4 ]
+	then
+		echo "bad luck"
+	elif [ $counter -eq 8 ]
+	then
+		echo "good luck"
+	else
+		echo "Holberton School"
+	fi
+	(( counter++ ))
+done
