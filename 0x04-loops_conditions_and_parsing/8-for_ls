@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Displays content of cd in list format with part after dash
+list=$(ls)
+for i in $list
+do
+	echo "$i" | cut -d "-" -f 2
+done
