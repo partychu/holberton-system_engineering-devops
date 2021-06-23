@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Scrip that displays the time fore 12 hours and 59 min
+hour=0
+while [ $hour -le 12 ]
+do
+	min=1
+	echo "Hour: $hour"
+	while [ $min -le 59 ]
+	do
+		echo $min
+		(( min ++ ))
+	done
+	(( hour++ ))
+done
