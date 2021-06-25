@@ -1,2 +1,3 @@
 #!/bin/bash
-pidof pidof
+# Displays its own PID
+echo $$
