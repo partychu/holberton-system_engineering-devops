@@ -12,4 +12,4 @@ file_line { 'password authentication':
   path    => '/etc/ssh/ssh_config',
   line    => 'PasswordAuthentication no',
   match   => 'PasswordAuthentication',
-
+}
