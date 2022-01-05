@@ -2,14 +2,14 @@
 
 file_line { 'identity file':
   ensure => present,
-  path   => '~/.ssh/config',
+  path   => '/etc/ssh/ssh_config',
   line   => 'IdentityFile ~/.ssh/school',
   match  => 'IdentityFile',
 }
 
 file_line { 'password authentication':
   ensure  => present,
-  path    => '~/.ssh/config',
+  path    => '/etc/ssh/ssh_config',
   line    => 'PasswordAuthentication no',
   match   => 'PasswordAuthentication',
 
