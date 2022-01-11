@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Configures brand new Ubuntu machine
+# shellcheck disable=SC21
+
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt-get install nginx -y
+sudo sed -i "16i\\\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
+sudo service nginx restart
