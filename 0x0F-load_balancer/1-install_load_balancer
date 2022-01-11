@@ -7,4 +7,4 @@ sudo sed -i '$ aENABLED=1' /etc/default/haproxy
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.original
 sudo sed -i '$ a\\nfrontend haproxynode\n\tbind *:80\n\tmode http\n\tdefault_backend backendnodes' /etc/haproxy/haproxy.cfg
 sudo sed -i '$ a\\nbackend backendnodes\n\tbalance roundrobin\n\tserver 2654-web-01 34.73.111.76:80 check\n\tserver 2654-web-02 184.72.74.246:80 check' /etc/haproxy/haproxy.cfg
-sudo service haproxy start
+sudo service haproxy restart
