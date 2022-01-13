@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 # Your Bash script must be 5 lines long or less
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 sudo service nginx restart
