@@ -4,7 +4,7 @@
 
 parse ()
 {
-	dig +noall +answer "$2.$1" | awk '{printf "The subdomain %s is a %s record and points to %s\n", var, $4, $5}' var="subdomain"
+	dig +noall +answer "$2.$1" | awk '{printf "The subdomain %s is a %s record and points to %s\n", var, $4, $5}' var="$2"
 }
 
 for subdomain in "www" "lb-01" "web-01" "web-02"
