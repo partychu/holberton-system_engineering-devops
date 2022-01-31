@@ -34,9 +34,9 @@ defaults
         errorfile 504 /etc/haproxy/errors/504.http
 
 frontend haproxynode
+        mode http
         bind *:80
         bind *:443 ssl crt /etc/haproxy/certs/www.partychu.tech.pem
-        mode http
         default_backend backendnodes
 
 backend backendnodes
