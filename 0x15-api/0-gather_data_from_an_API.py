@@ -13,8 +13,16 @@ if __name__ == '__main__':
         pass
     else:
         user_id = argv[1]
-        user_r = requests.get("https://jsonplaceholder.typicode.com/users/{}".format(user_id))
-        todo_r = requests.get("https://jsonplaceholder.typicode.com/todos/?userId={}".format(user_id))
-        print(user_r.json())
-        print('---------------')
-        print(todo_r.json())
+        url = "https://jsonplaceholder.typicode.com/todos/?userId={}"
+
+        user_j = requests.get("https://jsonplaceholder.typicode.com/users/{}"
+                              .format(user_id)).json()
+        todo_j = requests.get(url.format(user_id)).json()
+        t_list = []
+        for t in todo_j:
+            if t.get('completed'):
+                t_list.append(t.get('title'))
+        print('Employee {} is done with tasks({}/{}):'
+              .format(user_j.get('name'), len(t_list), len(todo_j)))
+        for t in t_list:
+            print('\t {}'.format(t))
