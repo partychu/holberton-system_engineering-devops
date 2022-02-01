@@ -30,4 +30,3 @@ if __name__ == '__main__':
         j_dict[user_id] = value_list
         with open("{}.json".format(user_id), 'w', newline='') as f:
             json.dump(j_dict, f)
-
